@@ -1,0 +1,14 @@
+<div class="upload-container">
+  <h2>Excel File Upload</h2>
+  <form>
+    <div class="form-group">
+      <label for="taxNumber">Numer KRS:</label>
+      <input type="text" id="taxNumber" class="form-control" [value]="taxNumber" (input)="onTaxNumberInput($event)" placeholder="Podaj numer KRS badanej spółki">
+    </div>
+
+    <div class="form-group">
+      <label for="fileUpload">Dodaj plik Excel:</label>
+      <input type="file" id="fileUpload" class="form-control" (change)="onFileChange($event)">
+    </div>
+
+    <textarea class="form-control" rows="10" readonly>{{ fileOutput }}</textarea>
