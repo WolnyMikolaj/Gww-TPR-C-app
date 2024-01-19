@@ -1,0 +1,21 @@
+<div class="upload-container">
+    <h2>Excel File Upload</h2>
+  
+    <div class="input-group">
+      <label for="taxNumber">Tax Number:</label>
+      <input type="text" id="taxNumber" [(ngModel)]="taxNumber" placeholder="Podaj numer KRS">
+    </div>
+  
+    <div class="input-group">
+      <label for="fileUpload">Upload Excel File:</label>
+      <input type="file" id="fileUpload" (change)="onFileChange($event)">
+    </div>
+  
+    <button (click)="onFileChange($event)">Upload File</button>
+    
+    <!-- Optional: Display area for messages or data -->
+    <div class="output">
+      <!-- You can dynamically display data or messages here -->
+    </div>
+  </div>
+  
